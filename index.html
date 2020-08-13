@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive slide menu</title>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/9a734c87b8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <a class="slide-open" onclick="openSlideMenu()" href="#"><i class="fas fa-bars fa-2x"></i></a>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div class="slide-menu" id="slide-menu-left">
+      <div class="slide-close">
+        <a onclick="closeSlideMenu()" href="#"><i class="fas fa-times"></i></a>
+      </div>
+      <div class="slide-menu-contents">
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="main-content" id="main">
+      <h1>Responsive menu slider</h1>
+    </div>
+
+    <script type="text/javascript">
+      function openSlideMenu() {
+        document.getElementById("slide-menu-left").style.width="250px";
+        document.getElementById("main").style.marginLeft="250px";
+      }
+
+      function closeSlideMenu() {
+        document.getElementById("slide-menu-left").style.width="0";
+        document.getElementById("main").style.marginLeft="0";
+      }
+    </script>
+  </body>
+</html>
